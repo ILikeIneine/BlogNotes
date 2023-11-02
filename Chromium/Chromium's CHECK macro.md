@@ -222,3 +222,5 @@ CheckError::~CheckError() {
 在crash之前会先把`log_message_`释放。这个`::logging::LogMessage`在析构的时候会把之前的stream的log全部释放打印，the procedure is quite quite complex，[Source Here](https://source.chromium.org/chromium/chromium/src/+/main:base/logging.cc;l=720;drc=c177416839ec7a3fe2fe6e91a7e8e519248f96bd;bpv=0;bpt=1)
 
 这样子，就会在触发_debug_point之前把堆栈信息和追加的流日志打印出来。
+
+在老一点的版本中，还是使用了和三目运算符类似的技法（例如在106版本内核）而不是`switch`，分析原理和方式无异。

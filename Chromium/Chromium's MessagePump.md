@@ -118,11 +118,37 @@ override 了`DoWork`。
 
 完了返回下一次的任务的信息到`DoWork`。这里如果NextTask不是immediate的话就delay，并设置一下delay的时间。
 
-#### MainThreadOnly
+下面介绍一些概念。
 
-main_thread_only() 获取到的MainThreadOnly代表只在当前线程中使用的数据， 可以不用加锁访问。
+- *MainThreadOnly*
 
-TODO: explaination
+MainThreadOnly是一个结构体，存在于很多类中定义为一个inner class。`MainThreadOnly`中存放的数据一般和当前线程绑定，并且只在当前线程中使用。可以不用加锁访问。
+
+- *AnyThread*
+
+与MainThreadOnly语义上相对的是AnyThread。这个结构体可以被其他任意线程访问（需要持锁）。
+
+`main_thread_only().task_source->SelectNextTask()`这里的task_resource是被[sequence_manager_impl](https://source.chromium.org/chromium/chromium/src/+/main:base/task/sequence_manager/sequence_manager_impl.cc;l=201;)通过SetSequencedTaskSource注入的，所以task_source 为SequenceManagerImpl。
+
+- *[SequenceManager](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/base/task/sequence_manager/README.md)*
+
+`SequenceManager`的`MainThreadOnly`中有一个结构[`WakeUpQueue`](https://source.chromium.org/chromium/chromium/src/+/main:base/task/sequence_manager/wake_up_queue.h;l=109;)，而`WakeUpQueue`通过一个最大堆`IntrusiveHeap<ScheduledWakeUp, std::greater<>>`来保存多个`ScheduledWakeUp`。
+
+`ScheduledWakeUp`持有`TaskQueueImpl`对象。`TaskQueueImpl`中的`MainThreadOnly`和`Anythread`对象分别持有：
+
+- [MainThreadOnly::delayed_work_queue](https://source.chromium.org/chromium/chromium/src/+/main:base/task/sequence_manager/task_queue_impl.h;l=424;)
+
+- [MainThreadOnly::immediate_work_queue](https://source.chromium.org/chromium/chromium/src/+/main:base/task/sequence_manager/task_queue_impl.h;l=425;)
+
+- [MainThreadOnly::delayed_incoming_queue](https://source.chromium.org/chromium/chromium/src/+/main:base/task/sequence_manager/task_queue_impl.h;l=426;)
+
+- [Anythread::immediate_incoming_queue](https://source.chromium.org/chromium/chromium/src/+/main:base/task/sequence_manager/task_queue_impl.h;l=575;)
+
+也就是说一个`SequenceManagerImpl`可以管理多个`TaskQueueImpl`。
+
+这里我们也可以看到AnyThread是通过编译器指令指定了[`GUARDED_BY(any_thread_lock)`](https://source.chromium.org/chromium/chromium/src/+/main:base/task/sequence_manager/task_queue_impl.h;l=589;)互斥锁。
+
+当延迟任务提交后，会进入到`delayed_incoming_queue`，当到达可执行时间后提交到`delayed_work_queue`，然后去执行。立即执行的任务先提交到`immediate_incoming_queue`，然后由目标线程提交到`immediate_work_queue`，再去执行。
 
 ### MessagePumpForIO
 

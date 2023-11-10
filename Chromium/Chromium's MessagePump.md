@@ -106,33 +106,29 @@ override 了`DoWork`。
 
 3. 最后通过`main_thread_only().task_source->GetPendingWakeUp()` 获取下一次要执行的任务。返回给消息循环作为休眠时间的参考。
 
-如果可以，就进入批量执行任务，批量执行任务是一个循环，会不停的从task_source中获取任务。
-
-这个g_run_tasks_by_batches~~我不知道是个什么几把语义~~是允许批量执行任务，如果满足条件，就从`main_thread_only`里取任务然后交给`task_annotator_`去run。
-
-条件是：
+大致上，这里第一步的取任务是一个循环，条件是：
 
 1. 如果指定了g_run_tasks_by_batches（批量执行任务）
 2. batch_duration 没有超时（批量执行任务的最大时间）
 3. work_batch_size 没有到达上限（可批量执行任务数量）
 
-完了返回下一次的任务的信息到`DoWork`。这里如果NextTask不是immediate的话就delay，并设置一下delay的时间。
+这个g_run_tasks_by_batches~~我不知道是个什么几把语义~~是允许批量执行任务，如果满足条件，就从`main_thread_only`里取可以执行的任务然后交给`task_annotator_`去RunTask。
 
-下面介绍一些概念。
+批量任务执行完之后，返回下一次的取任务的等待信息给`DoWork`。
 
-- *MainThreadOnly*
+为了具体地分析以上三个流程，首先需要了解一些概念。
+
+#### MainThreadOnly
 
 MainThreadOnly是一个结构体，存在于很多类中定义为一个inner class。`MainThreadOnly`中存放的数据一般和当前线程绑定，并且只在当前线程中使用。可以不用加锁访问。
 
-- *AnyThread*
+#### AnyThread
 
 与MainThreadOnly语义上相对的是AnyThread。这个结构体可以被其他任意线程访问（需要持锁）。
 
-`main_thread_only().task_source->SelectNextTask()`这里的task_resource是被[sequence_manager_impl](https://source.chromium.org/chromium/chromium/src/+/main:base/task/sequence_manager/sequence_manager_impl.cc;l=201;)通过SetSequencedTaskSource注入的，所以task_source 为SequenceManagerImpl。
+#### [SequenceManager](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/base/task/sequence_manager/README.md)
 
-- *[SequenceManager](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/base/task/sequence_manager/README.md)*
-
-`SequenceManager`的`MainThreadOnly`中有一个结构[`WakeUpQueue`](https://source.chromium.org/chromium/chromium/src/+/main:base/task/sequence_manager/wake_up_queue.h;l=109;)，而`WakeUpQueue`通过一个最大堆`IntrusiveHeap<ScheduledWakeUp, std::greater<>>`来保存多个`ScheduledWakeUp`。
+`SequenceManager`的`MainThreadOnly`中有一个结构[`WakeUpQueue`](https://source.chromium.org/chromium/chromium/src/+/main:base/task/sequence_manager/wake_up_queue.h;l=109;)，而`WakeUpQueue`通过一个最小堆`IntrusiveHeap<ScheduledWakeUp, std::greater<>>`来保存多个`ScheduledWakeUp`，这确保delay时间最短的在最上面。
 
 `ScheduledWakeUp`持有`TaskQueueImpl`对象。`TaskQueueImpl`中的`MainThreadOnly`和`Anythread`对象分别持有：
 
@@ -149,6 +145,126 @@ MainThreadOnly是一个结构体，存在于很多类中定义为一个inner cla
 这里我们也可以看到AnyThread是通过编译器指令指定了[`GUARDED_BY(any_thread_lock)`](https://source.chromium.org/chromium/chromium/src/+/main:base/task/sequence_manager/task_queue_impl.h;l=589;)互斥锁。
 
 当延迟任务提交后，会进入到`delayed_incoming_queue`，当到达可执行时间后提交到`delayed_work_queue`，然后去执行。立即执行的任务先提交到`immediate_incoming_queue`，然后由目标线程提交到`immediate_work_queue`，再去执行。
+
+
+`main_thread_only().task_source->SelectNextTask()`这里的task_resource是被[sequence_manager_impl](https://source.chromium.org/chromium/chromium/src/+/main:base/task/sequence_manager/sequence_manager_impl.cc;l=201;)通过SetSequencedTaskSource注入的，所以task_source 为SequenceManagerImpl。
+
+```c++
+
+absl::optional<SequenceManagerImpl::SelectedTask>
+SequenceManagerImpl::SelectNextTaskImpl(LazyNow& lazy_now,
+                                        SelectTaskOption option) {
+  //...
+
+  // 当MainThreadOnly-> immediate_work_queue为空时候尝试从AnyThread->immediate_incoming_queue获取任务
+  ReloadEmptyWorkQueues();
+  // 把到时间的delayed_incoming_queue的task移到delayed_work_queue
+  MoveReadyDelayedTasksToWorkQueues(&lazy_now);
+
+  // If we sampled now, check if it's time to reclaim memory next time we go
+  // idle.
+
+  // ...
+
+  while (true) {
+    // 选择一个WorkQueue
+    internal::WorkQueue* work_queue =
+        main_thread_only().selector.SelectWorkQueueToService(option);
+    TRACE_EVENT_OBJECT_SNAPSHOT_WITH_ID(
+        TRACE_DISABLED_BY_DEFAULT("sequence_manager.debug"), "SequenceManager",
+        this,
+        AsValueWithSelectorResultForTracing(work_queue,
+                                            /* force_verbose */ false));
+
+
+    if (!work_queue)
+      return absl::nullopt;
+
+    // If the head task was canceled, remove it and run the selector again.
+    if (UNLIKELY(work_queue->RemoveAllCanceledTasksFromFront()))
+      continue;
+
+    if (UNLIKELY(work_queue->GetFrontTask()->nestable ==
+                     Nestable::kNonNestable &&
+                 main_thread_only().nesting_depth > 0)) {
+      // Defer non-nestable work. NOTE these tasks can be arbitrarily delayed so
+      // the additional delay should not be a problem.
+      // Note because we don't delete queues while nested, it's perfectly OK to
+      // store the raw pointer for |queue| here.
+      internal::TaskQueueImpl::DeferredNonNestableTask deferred_task{
+          work_queue->TakeTaskFromWorkQueue(), work_queue->task_queue(),
+          work_queue->queue_type()};
+      main_thread_only().non_nestable_task_queue.push_back(
+          std::move(deferred_task));
+      continue;
+    }
+
+    // ...
+    main_thread_only().task_execution_stack.emplace_back(
+        work_queue->TakeTaskFromWorkQueue(), work_queue->task_queue(),
+        InitializeTaskTiming(work_queue->task_queue()));
+
+    ExecutingTask& executing_task =
+        *main_thread_only().task_execution_stack.rbegin();
+    NotifyWillProcessTask(&executing_task, &lazy_now);
+
+    // Maybe invalidate the delayed task handle. If already invalidated, then
+    // don't run this task.
+    if (!executing_task.pending_task.WillRunTask()) {
+      executing_task.pending_task.task = DoNothing();
+    }
+
+    return SelectedTask(
+        executing_task.pending_task,
+        executing_task.task_queue->task_execution_trace_logger(),
+        executing_task.priority, executing_task.task_queue_name);
+  }
+}
+```
+
+取任务大致流程如上，接下来分析annotator运行任务的逻辑。
+
+具体代码可以看[这里](https://source.chromium.org/chromium/chromium/src/+/main:base/task/sequence_manager/thread_controller_with_message_pump_impl.cc;l=458;)，就是tracing 和 run。
+
+最后再来分析`task_source->GetPendingWakeUp()`，这里实际上调用的是[`SequenceManagerImpl::GetPendingWakeUp()`](https://source.chromium.org/chromium/chromium/src/+/main:base/task/sequence_manager/sequence_manager_impl.cc;).
+
+注释写的比较清晰了，跳转逻辑最后调用的是`main_thread_only().wake_up_queue->GetNextDelayedWakeUp()`
+
+跳转到[这里](https://source.chromium.org/chromium/chromium/src/+/main:base/task/sequence_manager/wake_up_queue.cc;l=120;)，取最小堆顶部的WakeUp，获取下次唤醒时间。
+
+这个是获取wake_up_queue_的堆顶taskqueue的唤醒时间，这个wake_up_queue_是怎么更新的呢？就是在我们每次取消息的时候，即：
+
+`SequenceManagerImpl::SelectNextTaskImpl()` -> `SequenceManagerImpl::MoveReadyDelayedTasksToWorkQueues()` -> `WakeUpQueue::MoveReadyDelayedTasksToWorkQueues()`
+
+循环中判断堆顶的任务是否已经可以执行，可执行的话调用`TaskQueueImpl::OnWakeUp()`。
+
+然后是`TaskQueueImpl::MoveReadyDelayedTasksToWorkQueue()`。
+
+> Enqueue all delayed tasks that should be running now, skipping any that have been canceled.
+
+接着在最后调用
+
+`TaskQueueImpl::UpdateWakeUp()`
+
+获取下一次唤醒时间，然后设置下一次唤醒时间，在`WakeUpQueue::SetNextWakeUpForQueue()`里面涉及到调整堆结构。具体，把最新的`WakeUp`信息添加到`wake_up_queue_`。
+
+在以上这些操作之后，这可能导致队列中的信息变乱，需要更新（update_needed）其他的wakeup信息。
+
+如果更新前后的wake_up时间不一样，会通过`DefaultWakeUpQueue::OnNextWakeUpChanged()`通知观察者。
+
+然后`SequenceManagerImpl::SetNextWakeUp()`调整任务调度,判断是否立刻唤醒
+
+`ThreadControllerWithMessagePumpImpl::ScheduleWork()`
+
+或者设置下次唤醒时间
+
+`ThreadControllerWithMessagePumpImpl::SetNextDelayedDoWork()`
+
+这些最后都会控制message_pump去执行对应的操作。
+
+`MessagePumpForUI::ScheduleWork()`会Post一条message`kMsgHaveWork`，告诉有消息来了。
+
+接下来看任务投递
 
 ### MessagePumpForIO
 

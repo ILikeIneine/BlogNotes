@@ -64,6 +64,10 @@ reference)
 
 一个表达式的值只可能是*左值*或者*右值*，或者*泛左值*和*纯右值*。
 
+拥有身份的表达式被称作“泛左值 (glvalue) 表达式”。左值和亡值都是泛左值表达式。可被移动的表达式被称作“右值 (rvalue) 表达式”。纯右值和亡值都是右值表达式。
+
 > An lvalue is not an rvalue and an rvalue is not an lvalue.
 
 我们讨论的比较多的一般还是指泛左值和纯右值，即glvalue和prvalue。
+
+C++17 有场合要求*复制消除*(copy elision)，纯右值已不可再被移动。

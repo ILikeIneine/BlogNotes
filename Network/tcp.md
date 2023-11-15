@@ -22,11 +22,11 @@ Most fo CPU cycles spent in **ESTABLISHed** state, for transferrring bytes.
 
 Too many articles talk about three-way handshake(3WH) and 4-times close.
 
-![pic](../asserts/Network/tcp.png)
+![pic](./asserts/Network/tcp.png)
 
 ## State Machine
 
-![](../asserts/Network/TCP%20state%20machine.png)
+![](./asserts/Network/TCP%20state%20machine.png)
 
 ## TCP本质
 

@@ -1,6 +1,6 @@
 # BlogNotes
 
-Note of some inspirations and brandstorms.
+Note of some inspirations and brainstorms.
 
 As well as work complains :(
 

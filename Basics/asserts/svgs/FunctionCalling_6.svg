@@ -1,0 +1,50 @@
+<svg style="max-width:670px" version="1.1" viewBox="0 0 177.27 56.885" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(6.2943e-8 -24.077)">
+  <path d="m26.627 35.053c-.05575-1.6576 1.3858-3.0428 3.6483-3.0428h11.037c2.1176 0 3.6845-.87517 3.6483-3.0348" fill="none" stroke="#648b8b" stroke-linecap="round" stroke-width=".52917"></path>
+  <path d="m63.332 35.053c.05575-1.6576-1.3858-3.0428-3.6483-3.0428h-11.037c-2.1176 0-3.6845-.87517-3.6483-3.0348" fill="none" stroke="#648b8b" stroke-linecap="round" stroke-width=".52917"></path>
+  <g letter-spacing="0px" stroke-width=".26458px" text-anchor="middle" word-spacing="0px">
+   <text x="141.64825" y="39.166817" fill="#666666" font-family="cascadia_code" font-size="3.87px" text-align="center" style="line-height:125%" xml:space="preserve"><tspan x="141.64825" y="39.166817" text-align="center">template &lt;typename T&gt;</tspan><tspan x="141.64825" y="44.348904" text-align="center">void <tspan fill="#2b9696" font-weight="bold" stroke-width=".26458px" text-align="center" text-anchor="middle">blast</tspan>(T* obj, float force)</tspan></text>
+   <text x="-9.9415274" y="47.394417" fill="none" font-family="cascadia_code" font-size="4.478px" stroke="#000000" text-align="center" style="line-height:125%" xml:space="preserve"><tspan x="-9.9415274" y="47.394417" stroke-width=".26458px"></tspan></text>
+   <g>
+    <text x="45.073227" y="27.499638" fill="#648b8b" font-family="Arimo" font-size="3.7042px" text-align="center" style="line-height:105%" xml:space="preserve"><tspan x="45.073227" y="27.499638" fill="#648b8b" font-size="3.7042px" stroke-width=".26458px">caller</tspan></text>
+    <text x="45.142128" y="40.754318" fill="#666666" font-family="cascadia_code" font-size="3.87px" text-align="center" style="line-height:125%" xml:space="preserve"><tspan x="45.142128" y="40.754318" fill="#666666" font-size="3.87px" stroke-width=".26458px" text-align="center" text-anchor="middle"><tspan fill="#2b9696" font-weight="bold" stroke-width=".26458px" text-align="center" text-anchor="middle">blast</tspan>(ast, 100)</tspan></text>
+    <text x="141.57936" y="27.499638" fill="#648b8b" font-family="Arimo" font-size="3.7042px" text-align="center" style="line-height:105%" xml:space="preserve"><tspan x="141.57936" y="27.499638" fill="#648b8b" font-size="3.7042px" stroke-width=".26458px">function template</tspan></text>
+   </g>
+  </g>
+  <path d="m107.26 35.053c-.0558-1.6576 1.3858-3.0428 3.6483-3.0428h26.912c2.1176 0 3.6845-.87517 3.6483-3.0348" fill="none" stroke="#648b8b" stroke-linecap="round" stroke-width=".52917"></path>
+  <path d="m175.71 35.053c.0557-1.6576-1.3858-3.0428-3.6483-3.0428h-26.912c-2.1176 0-3.6845-.87517-3.6483-3.0348" fill="none" stroke="#648b8b" stroke-linecap="round" stroke-width=".52917"></path>
+  <g fill="#b3b3b3" font-family="Arimo" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-anchor="middle" word-spacing="0px">
+   <text x="23.025562" y="55.545479" text-align="center" style="line-height:105%" xml:space="preserve"><tspan x="23.025562" y="55.545479" fill="#b3b3b3" font-size="3.7042px" stroke-width=".26458px">argument</tspan></text>
+   <text x="54.816998" y="55.545479" text-align="center" style="line-height:105%" xml:space="preserve"><tspan x="54.816998" y="55.545479" fill="#b3b3b3" font-size="3.7042px" stroke-width=".26458px">type</tspan></text>
+   <text x="141.5396" y="55.545479" text-align="center" style="line-height:105%" xml:space="preserve"><tspan x="141.5396" y="55.545479" fill="#b3b3b3" font-size="3.7042px" stroke-width=".26458px">function parameter type</tspan></text>
+  </g>
+  <rect x="13.229" y="57.415" width="63.5" height="12.171" fill="#fff" stroke="#333" stroke-linecap="round" stroke-width=".52917"></rect>
+  <g font-family="cascadia_code" font-size="3.87px" letter-spacing="0px" stroke-width=".26458px" text-anchor="middle" word-spacing="0px">
+   <text x="23.114965" y="61.656403" fill="#333333" text-align="center" style="line-height:125%" xml:space="preserve"><tspan x="23.114965" y="61.656403" fill="#333333" font-size="3.87px" stroke-width=".26458px" text-align="center" text-anchor="middle">ast</tspan></text>
+   <text x="23.114965" y="68.006401" fill="#333333" text-align="center" style="line-height:125%" xml:space="preserve"><tspan x="23.114965" y="68.006401" fill="#333333" font-size="3.87px" stroke-width=".26458px" text-align="center" text-anchor="middle">100</tspan></text>
+   <text x="54.864964" y="61.656403" fill="#ff5555" text-align="center" style="line-height:125%" xml:space="preserve"><tspan x="54.864964" y="61.656403" fill="#ff5555" font-size="3.87px" font-weight="bold" stroke-width=".26458px" text-align="center" text-anchor="middle"><tspan>galaxy::Asteroid</tspan><tspan>*</tspan></tspan></text>
+   <text x="54.747555" y="68.006401" fill="#333333" text-align="center" style="line-height:125%" xml:space="preserve"><tspan x="54.747555" y="68.006401" fill="#333333" font-size="3.87px" stroke-width=".26458px" text-align="center" text-anchor="middle">int</tspan></text>
+  </g>
+  <g stroke="#333" stroke-width=".52917">
+   <path d="m13.229 63.5h63.5" fill="none"></path>
+   <path d="m33.073 57.415v12.171" fill="none"></path>
+   <rect x="131.5" y="57.415" width="20.108" height="12.171" fill="#fff" stroke-linecap="round"></rect>
+  </g>
+  <g>
+   <text x="141.56148" y="61.656403" fill="#ff5555" font-family="cascadia_code" font-size="3.87px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="141.56148" y="61.656403" fill="#ff5555" font-size="3.87px" font-weight="bold" stroke-width=".26458px" text-align="center" text-anchor="middle"><tspan>T</tspan><tspan>*</tspan></tspan></text>
+   <text x="141.56148" y="68.006401" fill="#333333" font-family="cascadia_code" font-size="3.87px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="141.56148" y="68.006401" fill="#333333" font-size="3.87px" stroke-width=".26458px" text-align="center" text-anchor="middle">float</tspan></text>
+   <path d="m131.5 63.5h20.108" fill="none" stroke="#333" stroke-width=".52917"></path>
+   <text x="110.4253" y="75.653801" fill="#ff5555" font-family="Arimo" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:105%" xml:space="preserve"><tspan x="110.4253" y="75.653801"><tspan fill="#ff5555" font-weight="bold">T</tspan> is deduced as</tspan><tspan x="110.4253" y="79.543182"><tspan fill="#ff5555" font-family="cascadia_code" font-weight="bold">galaxy::Asteroid</tspan></tspan></text>
+  </g>
+  <g fill="none">
+   <path d="m70.117 62.733c12.425 9.1603 42.216 13.705 68.258-.81836" stroke="#f55" stroke-linecap="round" stroke-width=".26458"></path>
+   <path d="m135.89 61.737 2.7011-.0076-.77725 2.3149" stroke="#f55" stroke-linecap="round" stroke-width=".26458px"></path>
+   <g stroke="#cdcdcd" stroke-width=".26458px">
+    <path d="m44.45 41.808c.26458 6.6211-41.196 3.0883-43.392 11.969-.98617 3.9886 4.4979 6.7484 10.98 6.7484"></path>
+    <path d="m57.216 41.808c.12724 3.184-9.7518 6.5292-22.704 7.9002-14.818 1.5686-30.271 2.006-32.528 9.3603-1.2056 3.9279 3.5719 7.2776 10.054 7.2776"></path>
+    <path d="m132.83 45.115c-.26458 6.6211 38.652 2.92 38.416 10.865-.12223 4.1069-12.089 4.5448-18.572 4.5448"></path>
+    <path d="m156.18 44.983c1.1997 4.8129 18.654 1.3576 19.86 10.719 1.0539 8.177-14.792 10.246-23.366 10.644"></path>
+   </g>
+  </g>
+ </g>
+</svg>

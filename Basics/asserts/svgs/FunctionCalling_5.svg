@@ -1,0 +1,20 @@
+<svg style="max-width:465px" version="1.1" viewBox="0 0 123.03 64.294" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(-22.225 -117.21)">
+  <g>
+   <path d="m93.398 174.03v2.5698" fill="none" stroke="#9fbaba" stroke-linecap="round" stroke-width="2.6458"></path>
+   <text x="38.099903" y="161.3959" fill="#ff5555" font-family="Arimo" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:105%" xml:space="preserve"><tspan x="38.099903" y="161.3959">may involve</tspan><tspan x="38.099903" y="165.28528">SFINAE</tspan></text>
+   <path d="m93.371 121.71c0 3.2058-2.0938 6.2177-6.1242 6.2177h-7.2761c-4.9493 0-6.6807 3.1542-6.6807 6.6807v26.524c0 3.3398 2.7272 6.6477 6.6477 6.6477h6.6477c4.4641 0 6.813 2.3631 6.813 6.2012" fill="none" stroke="#9fbaba" stroke-linecap="round" stroke-width="2.6458"></path>
+   <text x="125.41245" y="127.52916" fill="#648b8b" font-family="Arimo" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:105%" xml:space="preserve"><tspan x="125.41245" y="127.52916">non-template</tspan><tspan x="125.41245" y="131.41853">function</tspan></text>
+   <text x="62.441578" y="127.52916" fill="#648b8b" font-family="Arimo" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:105%" xml:space="preserve"><tspan x="62.441578" y="127.52916" rotate="0 0 0 0">function</tspan><tspan x="62.441578" y="131.41853">template</tspan></text>
+  </g>
+  <path transform="matrix(.22958 0 0 .16103 95.26 144.98)" d="m12.088 188.58-20.29 35.143-20.29-35.143z" fill="#9fbaba"></path>
+  <g>
+   <path d="m93.398 118v3.7042c0 3.2058 2.1874 6.2177 6.2177 6.2177h7.2761c4.9493 0 6.6807 3.1542 6.6807 6.6807v26.524c0 3.3398-2.7272 6.6477-6.6477 6.6477h-6.6477c-4.4641 0-6.813 2.3631-6.813 6.2012" fill="none" stroke="#9fbaba" stroke-width="2.6458"></path>
+   <rect x="50.535" y="134.67" width="45.508" height="11.112" rx="3.175" ry="3.175" fill="#fffffb" stroke="#cacaca" stroke-linecap="round" stroke-width=".52917"></rect>
+   <text x="73.241096" y="139.39883" fill="#666666" font-family="Arimo" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:100%" xml:space="preserve"><tspan x="73.241096" y="139.39883">Template argument</tspan><tspan x="73.241096" y="143.36758">deduction</tspan></text>
+   <path d="m48.996 154.24c-3.3279.61575-5.472 2.1906-7.6648 3.7259" fill="none" stroke="#f55" stroke-width=".26458px"></path>
+   <rect x="50.535" y="150.02" width="45.508" height="11.112" rx="3.175" ry="3.175" fill="#fffffb" stroke="#cacaca" stroke-linecap="round" stroke-width=".52917"></rect>
+   <text x="73.241096" y="154.74469" fill="#666666" font-family="Arimo" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:100%" xml:space="preserve"><tspan x="73.241096" y="154.74469">Template argument</tspan><tspan x="73.241096" y="158.71344">substitution</tspan></text>
+  </g>
+ </g>
+</svg>

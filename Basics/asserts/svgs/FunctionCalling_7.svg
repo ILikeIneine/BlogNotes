@@ -1,0 +1,12 @@
+<svg style="max-width:590px" version="1.1" viewBox="0 0 156.1 28.84" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(6.2943e-8 -24.077)" stroke-width=".26458px">
+  <g font-family="cascadia_code" letter-spacing="0px" text-anchor="middle" word-spacing="0px">
+   <text x="-9.9415274" y="47.394417" fill="none" font-size="4.478px" stroke="#000000" text-align="center" style="line-height:125%" xml:space="preserve"><tspan x="-9.9415274" y="47.394417" stroke-width=".26458px"></tspan></text>
+   <text x="61.104324" y="28.118073" fill="#666666" font-size="3.87px" text-align="center" style="line-height:125%" xml:space="preserve"><tspan x="61.104324" y="28.118073" font-size="3.87px" stroke-width=".26458px" text-align="center" text-anchor="middle">template &lt;typename T&gt; void <tspan fill="#2b9696" font-weight="bold" stroke-width=".26458px" text-align="center" text-anchor="middle">blast</tspan>(<tspan fill="#ff5555" font-weight="bold">T</tspan>* obj, float force)</tspan></text>
+   <text x="83.061707" y="51.401413" fill="#666666" font-size="3.87px" text-align="center" style="line-height:125%" xml:space="preserve"><tspan x="83.061707" y="51.401413" font-size="3.87px" stroke-width=".26458px" text-align="center" text-anchor="middle">void <tspan fill="#2b9696" font-weight="bold" stroke-width=".26458px" text-align="center" text-anchor="middle">blast</tspan>&lt;galaxy::Asteroid&gt;(<tspan fill="#ff5555" font-weight="bold">galaxy::Asteroid</tspan>* obj, float force)</tspan></text>
+  </g>
+  <path d="m77.25 29.9c1.4379 9.4122 14.859 5.3462 15.098 16.93" fill="none" stroke="#f55"></path>
+  <path d="m90.487 45.079 1.8447 2.0554 1.709-2.0856" fill="none" stroke="#ff2a2a"></path>
+  <text x="98.147758" y="38.101032" fill="#ff5555" font-family="Arimo" font-size="3.7042px" letter-spacing="0px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:100%" xml:space="preserve"><tspan x="98.147758" y="38.101032" fill="#ff5555" font-size="3.7042px" stroke-width=".26458px">substitution</tspan></text>
+ </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg style="max-width:506px" version="1.1" viewBox="0 0 133.88 31.221" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(-22.225 -117.21)">
+  <path d="m78.317 145.19v-21.101" fill="none" stroke="#9fbaba" stroke-width="2.6458"></path>
+  <path transform="matrix(.22958 0 0 .16103 80.2 112.17)" d="m12.088 188.58-20.29 35.143-20.29-35.143z" fill="#9fbaba"></path>
+  <g>
+   <path d="m39.57 121.14v9.9606c0 2.506 2.2513 4.7238 4.9108 4.7238h27.101c4.5249 0 6.735 3.1219 6.735 5.9351" fill="none" stroke="#9fbaba" stroke-linecap="round" stroke-width="2.6458"></path>
+   <path d="m116.89 121.14v9.9606c0 2.506-2.2513 4.7238-4.9108 4.7238h-27.101c-4.5249 0-6.5659 3.1219-6.5659 5.9351" fill="none" stroke="#9fbaba" stroke-linecap="round" stroke-width="2.6458"></path>
+   <text x="138.25912" y="134.89708" fill="#ff5555" font-family="Arimo" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:105%" xml:space="preserve"><tspan x="138.25912" y="134.89708">may perform</tspan><tspan x="138.25912" y="138.78645">argument-dependent</tspan><tspan x="138.25912" y="142.67584">lookup</tspan></text>
+   <path d="m133.47 126.73c2.6806 1.181 3.9049 2.8679 4.9163 4.6289" fill="none" stroke="#f55" stroke-width=".26458px"></path>
+  </g>
+  <g>
+   <rect x="99.219" y="118" width="32.842" height="11.112" rx="3.175" ry="3.175" fill="#fffffb" stroke="#cacaca" stroke-linecap="round" stroke-width=".52917"></rect>
+   <text x="115.59104" y="122.73" fill="#666666" font-family="Arimo" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:100%" xml:space="preserve"><tspan x="115.59104" y="122.73">Unqualified</tspan><tspan x="115.59104" y="126.69875">name lookup</tspan></text>
+   <rect x="61.119" y="118" width="32.842" height="11.112" rx="3.175" ry="3.175" fill="#fffffb" stroke="#cacaca" stroke-linecap="round" stroke-width=".52917"></rect>
+   <text x="77.491066" y="122.73" fill="#666666" font-family="Arimo" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:100%" xml:space="preserve"><tspan x="77.491066" y="122.73">Qualified</tspan><tspan x="77.491066" y="126.69875">name lookup</tspan></text>
+   <rect x="23.019" y="118" width="32.842" height="11.112" rx="3.175" ry="3.175" fill="#fffffb" stroke="#cacaca" stroke-linecap="round" stroke-width=".52917"></rect>
+   <text x="39.391109" y="122.73" fill="#666666" font-family="Arimo" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:100%" xml:space="preserve"><tspan x="39.391109" y="122.73">Member</tspan><tspan x="39.391109" y="126.69875">name lookup</tspan></text>
+  </g>
+ </g>
+</svg>

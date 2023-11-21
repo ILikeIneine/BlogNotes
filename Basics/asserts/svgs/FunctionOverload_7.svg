@@ -1,0 +1,10 @@
+<svg style="max-width:526px" version="1.1" viewBox="0 0 139.17 13.758" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(6.2943e-8 -24.077)">
+  <text x="62.28854" y="36.520977" fill="#666666" font-family="cascadia_code" font-size="4.1457px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="62.28854" y="36.520977" fill="#666666" font-size="3.87px" stroke-width=".26458px" text-align="center" text-anchor="middle">void galaxy::<tspan fill="#2b9696" font-weight="bold" stroke-width=".26458px" text-align="center" text-anchor="middle">blast</tspan>(galaxy::Asteroid* ast, float force)</tspan></text>
+  <g>
+   <path transform="matrix(-.23106 .017039 .016637 .23172 145.18 37.281)" d="m33.962-32.6 6.6145 4.4304 7.3911-2.9583-2.1695 7.6598 5.0975 6.1152-7.9554.30369-4.2407 6.7377-2.7472-7.4721-7.7184-1.9511 6.2575-4.9217z" fill="#ffff5d" stroke="#ffd161" stroke-linecap="round" stroke-width="1.8367"></path>
+   <text transform="rotate(10.512)" x="125.81173" y="8.9775229" fill="#ff5555" font-family="Arimo" font-size="4.4348px" letter-spacing="0px" stroke-width=".30157px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:100%" xml:space="preserve"><tspan x="125.81173" y="8.9775229" fill="#ff5555" font-family="Arimo" font-size="4.4348px" font-weight="bold" stroke-width=".30157px">WINNER!</tspan></text>
+   <path transform="matrix(-.20441 .1086 .1085 .20517 119.12 27.658)" d="m33.962-32.6 6.6145 4.4304 7.3911-2.9583-2.1695 7.6598 5.0975 6.1152-7.9554.30369-4.2407 6.7377-2.7472-7.4721-7.7184-1.9511 6.2575-4.9217z" fill="#ffff5d" stroke="#ffd161" stroke-linecap="round" stroke-width="1.8367"></path>
+  </g>
+ </g>
+</svg>

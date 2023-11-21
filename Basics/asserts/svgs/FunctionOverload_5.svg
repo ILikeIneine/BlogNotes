@@ -1,0 +1,13 @@
+<svg style="max-width:584px" version="1.1" viewBox="0 0 154.52 12.171" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(6.2943e-8 -24.077)">
+  <g font-family="cascadia_code" letter-spacing="0px" stroke-width=".26458px" word-spacing="0px">
+   <text x="7.7322202" y="28.583473" fill="#666666" font-size="3.87px" style="line-height:125%" xml:space="preserve"><tspan x="7.7322202" y="28.583473" fill="#666666" font-size="3.87px" stroke-width=".26458px">void galaxy::<tspan fill="#2b9696" font-weight="bold" stroke-width=".26458px">blast</tspan>(galaxy::Asteroid* ast, float force)</tspan></text>
+   <text x="-9.9415274" y="47.394417" fill="none" font-size="4.478px" stroke="#000000" text-align="center" text-anchor="middle" style="line-height:125%" xml:space="preserve"><tspan x="-9.9415274" y="47.394417" stroke-width=".26458px"></tspan></text>
+   <text x="8.1737194" y="34.46806" fill="#666666" font-size="3.87px" style="line-height:125%" xml:space="preserve"><tspan x="8.1737194" y="34.46806" fill="#666666" font-size="3.87px" stroke-width=".26458px">void <tspan fill="#2b9696" font-weight="bold" stroke-width=".26458px">blast</tspan>&lt;galaxy::Asteroid&gt;(galaxy::Asteroid* obj, float force)</tspan></text>
+  </g>
+  <circle cx="3.3073" cy="33.205" r="2.5135" fill="#fff" stroke="#666" stroke-linecap="round" stroke-width=".26458"></circle>
+  <text x="3.2992578" y="34.442593" fill="#333333" font-family="cascadia_code" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="3.2992578" y="34.442593" fill="#666666" font-family="Arimo" font-size="3.9688px" stroke-width=".26458px">2</tspan></text>
+  <circle cx="3.3073" cy="27.384" r="2.5135" fill="#fff" stroke="#666" stroke-linecap="round" stroke-width=".26458"></circle>
+  <text x="3.2992578" y="28.621758" fill="#333333" font-family="cascadia_code" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="3.2992578" y="28.621758" fill="#666666" font-family="Arimo" font-size="3.9688px" stroke-width=".26458px">1</tspan></text>
+ </g>
+</svg>

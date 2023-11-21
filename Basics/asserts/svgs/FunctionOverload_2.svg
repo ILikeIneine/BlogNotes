@@ -1,0 +1,22 @@
+<svg style="max-width:555px" version="1.1" viewBox="0 0 146.84 52.123" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(-22.225 -117.21)">
+  <path d="m88.635 119.59v39.891" fill="none" stroke="#9fbaba" stroke-linecap="square" stroke-width="2.6458"></path>
+  <text x="131.2334" y="143.13966" fill="#ff5555" font-family="Arimo" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:100%" xml:space="preserve"><tspan x="131.2334" y="143.13966">finds implicit</tspan><tspan x="131.2334" y="146.84383">conversions</tspan></text>
+  <path transform="matrix(.22958 0 0 .16103 90.497 129.1)" d="m12.088 188.58-20.29 35.143-20.29-35.143z" fill="#9fbaba"></path>
+  <g>
+   <path d="m41.143 123.43h94.985" fill="none" stroke="#648b8b" stroke-dasharray="1.05833, 1.05833" stroke-width=".26458"></path>
+   <text x="30.91917" y="122.76663" fill="#648b8b" font-family="Arimo" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:105%" xml:space="preserve"><tspan x="30.91917" y="122.76663">candidate</tspan><tspan x="30.91917" y="126.65601">functions</tspan></text>
+   <text x="30.956247" y="164.83546" fill="#648b8b" font-family="Arimo" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:105%" xml:space="preserve"><tspan x="30.956247" y="164.83546">viable</tspan><tspan x="30.956247" y="168.72484">functions</tspan></text>
+  </g>
+  <g>
+   <rect x="63.5" y="128.32" width="50.271" height="11.112" rx="3.175" ry="3.175" fill="#fffffb" stroke="#cacaca" stroke-linecap="round" stroke-width=".52917"></rect>
+   <text x="88.605385" y="133.04883" fill="#666666" font-family="Arimo" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:100%" xml:space="preserve"><tspan x="88.605385" y="133.04883">Arguments must</tspan><tspan x="88.605385" y="137.01758">be compatible</tspan></text>
+   <rect x="63.5" y="143.67" width="50.271" height="11.112" rx="3.175" ry="3.175" fill="#fffffb" stroke="#cacaca" stroke-linecap="round" stroke-width=".52917"></rect>
+  </g>
+  <g>
+   <text x="88.605385" y="148.39468" fill="#666666" font-family="Arimo" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:100%" xml:space="preserve"><tspan x="88.605385" y="148.39468">Constraints must</tspan><tspan x="88.605385" y="152.36343">be satisfied (C++20)</tspan></text>
+   <path d="m115.35 134.13c3.965 1.0146 7.0919 2.9053 8.9994 5.3009" fill="none" stroke="#f55" stroke-width=".26458px"></path>
+   <path d="m41.143 165.23h94.985" fill="none" stroke="#648b8b" stroke-dasharray="1.05833, 1.05833" stroke-width=".26458"></path>
+  </g>
+ </g>
+</svg>

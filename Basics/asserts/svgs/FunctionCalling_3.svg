@@ -1,0 +1,21 @@
+<svg style="max-width:496px" version="1.1" viewBox="0 0 131.23 30.162" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(6.2943e-8 -24.077)">
+  <g font-family="cascadia_code" letter-spacing="0px" stroke-width=".26458px" word-spacing="0px">
+   <text x="7.7322202" y="40.754318" fill="#666666" font-size="3.87px" style="line-height:125%" xml:space="preserve"><tspan x="7.7322202" y="40.754318" fill="#666666" font-size="3.87px" stroke-width=".26458px">void galaxy::<tspan fill="#2b9696" font-weight="bold" stroke-width=".26458px">blast</tspan>(galaxy::Asteroid* ast, float force)</tspan></text>
+   <text x="-9.9415274" y="47.394417" fill="none" font-size="4.478px" stroke="#000000" text-align="center" text-anchor="middle" style="line-height:125%" xml:space="preserve"><tspan x="-9.9415274" y="47.394417" stroke-width=".26458px"></tspan></text>
+   <text x="7.8947835" y="46.607025" fill="#666666" font-size="3.87px" style="line-height:125%" xml:space="preserve"><tspan x="7.8947835" y="46.607025" fill="#666666" font-size="3.87px" stroke-width=".26458px">bool <tspan fill="#2b9696" font-weight="bold" stroke-width=".26458px">blast</tspan>(Target target)</tspan></text>
+   <text x="8.1737185" y="52.45974" fill="#666666" font-size="3.87px" style="line-height:125%" xml:space="preserve"><tspan x="8.1737185" y="52.45974" fill="#666666" font-size="3.87px" stroke-width=".26458px">template &lt;typename T&gt; void <tspan fill="#2b9696" font-weight="bold" stroke-width=".26458px">blast</tspan>(T* obj, float force)</tspan></text>
+  </g>
+  <g>
+   <text x="67.050423" y="27.764225" fill="#ff5555" font-family="Arimo" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:105%" xml:space="preserve"><tspan x="67.050423" y="27.764225">this one comes from</tspan><tspan x="67.050423" y="31.653603">the <tspan font-family="cascadia_code" font-weight="bold">galaxy</tspan> namespace</tspan></text>
+   <path d="m46.603 30.685c-2.9126.8432-4.9272 2.7755-6.6146 5.2795" fill="none" stroke="#f55" stroke-width=".26458px"></path>
+   <path d="m19.112 38.303c.73679-1.1647 6.8656-1.3761 11.674-1.505 7.0358-.18862 14.238.33481 16.654.7727 2.8302.51312 3.903 3.8448-.03176 4.2333-6.5608.64783-19.293.83821-26.193.26458-2.403-.21925-4.946-1.494-2.8931-3.346" fill="none" stroke="#f55" stroke-width=".52917"></path>
+  </g>
+  <circle cx="3.3073" cy="45.376" r="2.5135" fill="#fff" stroke="#666" stroke-linecap="round" stroke-width=".26458"></circle>
+  <text x="3.2992578" y="46.613438" fill="#333333" font-family="cascadia_code" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="3.2992578" y="46.613438" fill="#666666" font-family="Arimo" font-size="3.9688px" stroke-width=".26458px">2</tspan></text>
+  <circle cx="3.3073" cy="39.555" r="2.5135" fill="#fff" stroke="#666" stroke-linecap="round" stroke-width=".26458"></circle>
+  <text x="3.2992578" y="40.792603" fill="#333333" font-family="cascadia_code" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="3.2992578" y="40.792603" fill="#666666" font-family="Arimo" font-size="3.9688px" stroke-width=".26458px">1</tspan></text>
+  <circle cx="3.3073" cy="51.197" r="2.5135" fill="#fff" stroke="#666" stroke-linecap="round" stroke-width=".26458"></circle>
+  <text x="3.2992578" y="52.434273" fill="#333333" font-family="cascadia_code" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="3.2992578" y="52.434273" fill="#666666" font-family="Arimo" font-size="3.9688px" stroke-width=".26458px">3</tspan></text>
+ </g>
+</svg>

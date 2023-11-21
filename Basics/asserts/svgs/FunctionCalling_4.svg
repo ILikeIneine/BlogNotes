@@ -1,0 +1,19 @@
+<svg style="max-width:362px" version="1.1" viewBox="0 0 95.779 57.415" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g transform="translate(.26458 -24.077)">
+  <text x="-9.9415274" y="47.394417" fill="none" font-family="cascadia_code" font-size="4.478px" letter-spacing="0px" stroke="#000000" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="-9.9415274" y="47.394417" stroke-width=".26458px"></tspan></text>
+  <text x="19.998552" y="41.308662" fill="#666666" font-family="cascadia_code" font-size="4.8295px" letter-spacing="0px" stroke-width=".26458px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="19.998552" y="41.308662" fill="#666666" font-size="4.8295px" stroke-width=".26458px"><tspan fill="#2b9696" font-weight="bold" stroke-width=".26458px">blast</tspan>(ast, 100)</tspan></text>
+  <g font-family="Arimo" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-anchor="middle" word-spacing="0px">
+   <text x="41.55191" y="28.350765" fill="#648b8b" text-align="center" style="line-height:125%" xml:space="preserve"><tspan x="41.55191" y="28.350765" fill="#648b8b" font-family="Arimo" font-size="3.7042px" stroke-width=".26458px" text-align="center" text-anchor="middle">function call expression</tspan></text>
+   <text x="15.887339" y="54.015358" fill="#648b8b" text-align="center" style="line-height:125%" xml:space="preserve"><tspan x="15.887339" y="54.015358" fill="#648b8b" font-family="Arimo" font-size="3.7042px" stroke-width=".26458px" text-align="center" text-anchor="middle">unqualified name</tspan></text>
+   <text x="56.368591" y="55.33828" fill="#ff5555" text-align="center" style="line-height:105%" xml:space="preserve"><tspan x="56.368591" y="55.33828" font-family="Arimo" font-size="3.7042px" text-align="center">argument type is</tspan><tspan x="56.368591" y="59.227657" font-family="cascadia_code" font-size="3.7335px" font-weight="bold" text-align="center">galaxy::Asteroid*</tspan></text>
+   <text x="67.216515" y="71.21328" fill="#ff5555" text-align="center" style="line-height:105%" xml:space="preserve"><tspan x="67.216515" y="71.21328" text-align="center">the <tspan fill="#ff5555" font-family="cascadia_code" font-size="3.7335px" font-weight="bold">galaxy</tspan> namespace is</tspan><tspan x="67.216515" y="75.16098" text-align="center">seached for candidate functions</tspan><tspan x="67.216515" y="79.050362" text-align="center">(argument-dependent lookup)</tspan></text>
+  </g>
+  <path id="path2671" d="m19.043 35.587c-.05575-1.6576 1.3858-3.0428 3.6483-3.0428h14.212c2.1176 0 3.6845-.87517 3.6483-3.0348" fill="none" stroke="#648b8b" stroke-linecap="round" stroke-width=".52917"></path>
+  <use transform="matrix(-1 0 0 1 81.141 0)" width="100%" height="100%" stroke-width="1.3795" xlink:href="#path2671"></use>
+  <g fill="none" stroke-linecap="round">
+   <path d="m22.49 50.271 3.4396-7.4083" stroke="#648b8b" stroke-width=".52917"></path>
+   <path d="m46.567 51.594c-2.5688-2.5056-3.543-5.669-4.7625-8.7313" stroke="#f55" stroke-width=".26458"></path>
+   <path d="m51.594 67.733c-2.4669-1.8753-4.0485-4.3167-5.0271-7.1438" stroke="#f55" stroke-width=".26458"></path>
+  </g>
+ </g>
+</svg>

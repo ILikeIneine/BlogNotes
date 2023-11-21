@@ -1,0 +1,8 @@
+<svg style="max-width:487px" version="1.1" viewBox="0 0 128.85 6.35" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(6.2943e-8 -24.077)">
+  <text x="-9.9415274" y="47.394417" fill="none" font-family="cascadia_code" font-size="4.478px" letter-spacing="0px" stroke="#000000" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="-9.9415274" y="47.394417" stroke-width=".26458px"></tspan></text>
+  <text x="8.1737185" y="28.647236" fill="#666666" font-family="cascadia_code" font-size="3.87px" letter-spacing="0px" stroke-width=".26458px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="8.1737185" y="28.647236" fill="#666666" font-size="3.87px" stroke-width=".26458px">template &lt;typename T&gt; void <tspan fill="#2b9696" font-weight="bold" stroke-width=".26458px">blast</tspan>(T* obj, float force)</tspan></text>
+  <circle cx="3.3073" cy="27.384" r="2.5135" fill="#fff" stroke="#666" stroke-linecap="round" stroke-width=".26458"></circle>
+  <text x="3.2992578" y="28.621769" fill="#333333" font-family="cascadia_code" font-size="3.7042px" letter-spacing="0px" stroke-width=".26458px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="3.2992578" y="28.621769" fill="#666666" font-family="Arimo" font-size="3.9688px" stroke-width=".26458px">3</tspan></text>
+ </g>
+</svg>

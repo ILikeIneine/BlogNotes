@@ -1,4 +1,6 @@
-# How c++ Resolves A Function Call
+# How C++ Resolves A Function Call
+
+Ref: [How C++ Resolves A Function Call](https://preshing.com/20210315/how-cpp-resolves-a-function-call/)
 
 这是编译器如何为一个给定*函数调用表达式*匹配正确的函数的过程：
 
@@ -129,7 +131,7 @@ template <typename T> void blast(T* obj, float force, typename T::Units mass = 5
 
 ![FuncionOverload_5](./asserts/svgs/FunctionOverload_5.svg)
 
-事实上，如果上述任何一个函数是唯一可行的函数，那么它就是处理函数调用的函数。但由于存在两个函数，编译器现在必须做它在有多个可行函数时总是要做的事情：它必须确定哪一个是最佳可行函数。要成为最佳可行函数，其中一个函数必须 "战胜" 所有其他可行函数，这是由一系列规则决定的。
+事实上，如果上述任何一个函数是唯一可行的函数，那么它就是处理函数调用的函数。但由于存在两个函数，编译器现在必须做它在有多个可行函数时总是要做的事情：它必须确定哪一个是最佳可行函数。要成为最佳可行函数，其中一个函数必须 "战胜"(更加匹配于) 所有其他可行函数，这是由一系列规则决定的。
 
 ![FuncionOverload_6](./asserts/svgs/FunctionOverload_6.svg)
 
